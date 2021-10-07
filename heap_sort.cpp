@@ -43,6 +43,11 @@ void build_max_heap (int arr[], int n)
     }
 }
 
+void heapsort(int arr[], int n)
+{
+   build_max_heap (arr, n);
+}
+
 void printArray (int arr[], int n)
 {
   for (int i = 0; i < n; ++i)
@@ -56,7 +61,7 @@ int main ()
   int arr[] = { 12, 11, 13, 5, 6, 7 };
   int n = sizeof (arr) / sizeof (arr[0]);
 
-  build_max_heap (arr, n);
+  heapsort (arr, n);
 
   printArray (arr, n);
 
