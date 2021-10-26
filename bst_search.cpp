@@ -27,7 +27,6 @@ Node * search (Node * t, int k)
     {
       return search (t->right, k);
     }
-  return 0;
 }
 
 int main ()
