@@ -29,6 +29,19 @@ Node * search (Node * t, int k)
     }
 }
 
+void updateBST(Node *t, int k, int r){
+    if(t->data == k){
+        t->data = r;
+        return;
+    }
+    
+    if(k< t->data){
+        updateBST(t->left, k,r);
+    }else{
+        updateBST(t->right, k,r);
+    }
+}
+
 int main ()
 {
   struct Node *root = new Node (7);
